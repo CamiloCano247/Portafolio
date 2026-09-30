@@ -1,22 +1,18 @@
 import streamlit as st
 from PIL import Image
 
-# Estilos CSS específicos (Solo fuente, color del sidebar y bordes de imagen)
 st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
         
-        /* Aplicar fuente Montserrat solo a los textos para no dañar los iconos nativos de Streamlit */
         h1, h2, h3, p, div[data-testid="stMarkdownContainer"] {
             font-family: 'Montserrat', sans-serif !important;
         }
         
-        /* Color de fondo para la barra lateral */
         [data-testid="stSidebar"] {
             background-color: #D0F5C8 !important;
         }
-        
-        /* Color de texto oscuro para la barra lateral */
+
         [data-testid="stSidebar"] h1, 
         [data-testid="stSidebar"] h2, 
         [data-testid="stSidebar"] h3, 
@@ -24,11 +20,12 @@ st.markdown("""
         [data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] p {
             color: #222222 !important;
         }
-        
-        /* Bordes redondeados sutiles para las imágenes */
+
         img {
             border-radius: 10px;
         }
+
+        
     </style>
 """, unsafe_allow_html=True)
 
@@ -45,7 +42,7 @@ with st.sidebar:
 
 url_ia="https://sites.google.com/view/computacinavanzada/inicio?pli=1&authuser=0"
 st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
+st.write(f"[Enlace para páginas y ejercicios]({url_ia})")
 
 col1, col2, col3 = st.columns(3)
 
@@ -55,6 +52,7 @@ with col1:
  st.image(image, width=200)
  st.write("En el siguiente enlace explorarás la aplicación interactiva sobre Vectores y Matrices.") 
  url = "https://clasfruta.streamlit.app/"
+ st.image(f"({url})")
  st.write(f"[Vectores y Matrices]({url})")
 
  st.subheader("4. Preparación de datos")
