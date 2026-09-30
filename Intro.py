@@ -52,7 +52,6 @@ with col1:
  st.image(image, width=200)
  st.write("En el siguiente enlace explorarás la aplicación interactiva sobre Vectores y Matrices.") 
  url = "https://clasfruta.streamlit.app/"
- st.image(f"({url})")
  st.write(f"[Vectores y Matrices]({url})")
 
  st.subheader("4. Preparación de datos")
